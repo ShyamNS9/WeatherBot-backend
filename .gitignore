@@ -1,0 +1,9 @@
+.vscode
+.idea
+.rasa/
+__pycache__/
+venv4weatherbot/
+models/
+tests/
+
+.env

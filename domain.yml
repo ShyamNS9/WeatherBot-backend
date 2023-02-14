@@ -1,0 +1,111 @@
+version: '3.1'
+intents:
+- giving_location:
+    use_entities:
+    - location
+- deny
+- goodbye
+- greet
+- affirm
+- mood_great
+- mood_unhappy
+- about_rasa
+- bot_challenge
+- asking_weather
+- asking_explanation
+- deny_giving_location
+- telling_current_location
+- out_of_scope_default
+- out_of_scope_rephrase
+- out_of_scope_food
+- out_of_scope_math
+- out_of_scope_vehicle
+- out_of_scope_personal
+- display_all_details
+- display_list
+- out_of_scope_error_sentence
+- intsa_facebook_types_reply
+actions:
+- utter_default
+- utter_please_rephrase
+- utter_cheer_up
+- action_greet_welcome
+- action_get_the_location
+- action_greet_get_the_location
+- action_explain_to_why
+- action_explain_to_deny
+- action_explain_to_current_location
+- action_again_ask_for_location
+- action_did_that_help
+- action_happy
+- action_proceed_further
+- action_goodbye
+- action_iamabot
+- action_slots_values
+- action_about_rasa
+- action_see_you_again
+- action_giving_report
+- action_debugging
+- action_handling_out_of_scope_default
+- action_handling_out_of_scope_rephrase
+- action_handling_out_of_scope_food
+- action_handling_out_of_scope_math
+- action_handling_out_of_scope_vehicle
+- action_handling_out_of_scope_personal
+- action_handling_out_of_scope_error_sentence
+- action_handling_out_of_scope_error_location
+- action_location_validation_and_conformation
+- action_master_weather_fetch
+- action_master_weather_print
+- action_ask_for_more_details
+- action_display_all_details
+- action_display_list
+- action_reply_for_availability
+
+responses:
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+  utter_default:
+  - text: I'm sorry, I can't help you.
+  - text: Sorry I didn't get that.
+  - text: I didn't understand, please try again.
+  - text: I'm afraid I didn't get what you just said.
+  utter_please_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+  - text: Sorry, I didn't get that 🤷. Could you please rephrase?
+  - text: I didn't understand, could you rephrase that?
+  - text: I'm afraid I didn't get what you just said. Could you rephrase that?
+  - text: I didn't quite get that, could you rephrase your message?
+  - text: Could you rephrase your message? I didn't get it, I'm sorry.
+
+entities:
+- location
+slots:
+  location_slot:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: location
+  weather_data:
+    type: any
+    mappings:
+    - type: custom
+  oos_counter_default:
+    type: text
+    initial_value: 0
+    mappings:
+    - type: custom
+  oos_counter_else:
+    type: text
+    initial_value: 0
+    mappings:
+    - type: custom
+  fallback_counter:
+    type: text
+    initial_value: 0
+    mappings:
+    - type: custom
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: false

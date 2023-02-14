@@ -1,0 +1,40 @@
+> Create a folder for RASA project.
+> Check for the python installation.
+    > Run command: python3 --version && pip3 --version
+        > If python is not installed
+            > Run command: sudo apt update && sudo apt install python3-dev python3-pip
+> Create a new virtual environment & activate environment:
+    > Run command: python3 -m venv ./venv_name
+    > Run command: source ./venv_name/bin/activate
+> Now installing rasa:
+    > Run command: pip3 install -U pip
+    > Run command: pip3 install rasa
+    > Run command: pip install rasa[spacy]   (this command is project specific)
+    > Run command: python3 -m spacy download en_core_web_md   (this command is project specific)
+    > Run command: pip install rasa[transformers]    (this command is project specific)
+    > Run command: rasa init
+    > Keep the same directory when the below message comes during rasa init command
+        "Please enter a path where the project will be created [default: current directory]" > click Enter to Continue
+    > Continue with training & trying the initial model with the process flow during the rasa init command.
+    > Exit the chat shell initial model with '/stop' command
+> Now copy the content of this project files with yours in the directory you have created during rasa init command.
+    for example: copy the content of nlu.yml file of this project to yours nlu.yml likewise do the same for all the file in this project.
+> Now you can train the model for this project:
+    > Run command: rasa train
+> After the model is trained you can have a conversation with bot in shell OR if you have a frontend setup done you can also do it on the web
+    > For conversation in shell:
+        > Run command: rasa shell
+        > To start action server: rasa run actions
+    > For conversation in web:
+        > Run command: rasa run -m models --enable-api --cors "*" --debug
+        > to start the action server: rasa run actions --cors "*" --debug
+
+> The frontend for this project is another GitHub repo:
+    > LINK:
+
+some rasa command to remember:
+> rasa train - To train the model
+> rasa shell - To run the trained model in the shell
+> rasa run actions - To run the action server
+> rasa run -m models --enable-api --cors "*" --debug
+> rasa run actions --cors "*" --debug

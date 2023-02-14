@@ -1,0 +1,46 @@
+version: "3.1"
+nlu:
+  - lookup: location
+    examples: |
+      - Paris, France
+      - New York City, USA
+      - London, England
+      - Bangkok, Thailand
+      - Hong Kong, China
+      - Dubai, United Arab Emirates
+      - Singapore
+      - Rome, Italy
+      - Macau, China
+      - Istanbul, Turkey
+      - Kuala Lumpur, Malaysia
+      - Delhi, India
+      - Tokyo, Japan
+      - Antalya, Turkey
+      - Mexico City, Mexico
+      - Moscow, Russia
+      - Porto, Portugal
+      - San Francisco, USA
+      - Beijing, China
+      - Los Angeles, USA
+      - Chicago, USA
+      - Barcelona, Spain
+      - Abu Dhabi, United Arab Emirates
+      - Amsterdam, Netherlands
+      - Madrid, Spain
+      - Sydney, Australia
+      - San Miguel de Allende, Mexico
+      - Lisbon, Portugal
+      - Vienna, Austria
+      - Mumbai, India
+      - Delhi, India
+      - Bangalore, India
+      - Hyderabad, India
+      - Ahmedabad, India
+      - Chennai, India
+      - Kolkata, India
+      - Surat, India
+      - Pune, India
+      - Jaipur, India
+      - Lucknow, India
+      - Kanpur, India
+      - Vijayawada, India

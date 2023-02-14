@@ -1,0 +1,161 @@
+version: "3.1"
+
+stories:
+
+- story: starts with greeting
+  steps:
+  - intent: greet
+  - action: action_greet_welcome
+  - action: action_get_the_location
+  - intent: giving_location
+  - slot_was_set:
+    - location_slot: null
+  - action: action_location_validation_and_conformation
+
+- story: interactive_story_1 story with WHY
+  steps:
+  - intent: greet
+  - action: action_greet_welcome
+  - action: action_get_the_location
+  - intent: asking_explanation
+  - action: action_explain_to_why
+  - action: action_get_the_location
+  - intent: giving_location
+    entities:
+    - location: Jaipur
+  - slot_was_set:
+    - location_slot: Jaipur
+  - action: action_location_validation_and_conformation
+
+- story: interactive_story_2 story with 'telling current location'
+  steps:
+  - intent: greet
+  - action: action_greet_welcome
+  - action: action_get_the_location
+  - intent: telling_current_location
+  - action: action_explain_to_current_location
+  - action: action_get_the_location
+  - intent: giving_location
+    entities:
+    - location: Mumbai
+  - slot_was_set:
+    - location_slot: Mumbai
+  - action: action_location_validation_and_conformation
+
+- story: interactive_story_3 story with 'deny to give location'
+  steps:
+  - intent: greet
+  - action: action_greet_welcome
+  - action: action_get_the_location
+  - intent: deny_giving_location
+  - action: action_explain_to_deny
+  - action: action_get_the_location
+  - intent: giving_location
+    entities:
+    - location: dubai
+  - slot_was_set:
+    - location_slot: dubai
+  - action: action_location_validation_and_conformation
+
+- story: starts with giving location
+  steps:
+  - intent: giving_location
+  - slot_was_set:
+      - location_slot: null
+  - action: action_greet_welcome
+  - action: action_location_validation_and_conformation
+
+- story: interactive_story_1 starts with giving location
+  steps:
+  - intent: giving_location
+    entities:
+    - location: Bangalore
+  - slot_was_set:
+    - location_slot: Bangalore
+  - action: action_greet_welcome
+  - action: action_location_validation_and_conformation
+
+- story: starts directly with weather
+  steps:
+  - intent: asking_weather
+  - action: action_greet_get_the_location
+  - intent: giving_location
+  - slot_was_set:
+    - location_slot: null
+  - action: action_location_validation_and_conformation
+
+- story: interactive_story_1 starts directly with weather
+  steps:
+  - intent: asking_weather
+  - action: action_greet_get_the_location
+  - intent: giving_location
+    entities:
+    - location: Delhi
+  - slot_was_set:
+    - location_slot: Delhi
+  - action: action_location_validation_and_conformation
+
+- story: interactive_story_1 starts directly asking why
+  steps:
+  - intent: asking_weather
+  - action: action_greet_get_the_location
+  - intent: asking_explanation
+  - action: action_explain_to_why
+  - action: action_get_the_location
+  - intent: giving_location
+    entities:
+    - location: Jharkhand
+  - slot_was_set:
+    - location_slot: Jharkhand
+  - action: action_location_validation_and_conformation
+
+- story: interactive_story_1 starts directly deny to location
+  steps:
+  - intent: asking_weather
+  - action: action_greet_get_the_location
+  - intent: deny_giving_location
+  - action: action_explain_to_deny
+  - action: action_get_the_location
+  - intent: giving_location
+    entities:
+    - location: New York
+  - slot_was_set:
+    - location_slot: New York
+  - action: action_location_validation_and_conformation
+
+- story: interactive_story_1 starts directly telling my current location
+  steps:
+  - intent: asking_weather
+  - action: action_greet_get_the_location
+  - intent: telling_current_location
+  - action: action_explain_to_current_location
+  - action: action_get_the_location
+  - intent: giving_location
+    entities:
+    - location: Istanbul
+  - slot_was_set:
+    - location_slot: Istanbul
+  - action: action_location_validation_and_conformation
+
+
+#- story: sad path 1
+#  steps:
+#  - intent: greet
+#  - action: action_greet
+#  - action: action_welcome
+#  - intent: mood_unhappy
+#  - action: action_cheer_up
+#  - action: action_did_that_help
+#  - intent: affirm
+#  - action: action_happy
+#
+#- story: sad path 2
+#  steps:
+#  - intent: greet
+#  - action: action_greet
+#  - action: action_welcome
+#  - intent: mood_unhappy
+#  - action: action_cheer_up
+#  - action: action_did_that_help
+#  - intent: deny
+#  - action: action_goodbye

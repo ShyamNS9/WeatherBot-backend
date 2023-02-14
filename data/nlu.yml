@@ -1,0 +1,936 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - hey there
+    - hey dude
+    - good afternoon
+    - hello bot
+    - Good Morning
+    - Good morning
+    - Hey bot
+    - Well hello there
+    - What is up?
+    - Whats up my bot
+    - Whats up?
+    - good evening
+    - greet
+    - greetings
+    - hello everybody
+    - hello friend
+    - hello is anybody there
+    - hello it is me again
+    - hey dude
+    - hey lets talk
+
+- intent: intsa_facebook_types_reply
+  examples: |
+    - knock knock
+    - are you there?
+    - you there
+    - is anyone here
+    - are you online
+    - are you there bot
+    - anyone here
+    - can you give me reply
+    - are you there for chat
+    - is chat running
+    - is chat up
+
+- intent: goodbye
+  examples: |
+    - good by
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - see you later
+    - bye bot
+    - bye for now
+    - bye was nice talking to you
+    - catch you later
+    - good night
+    - goodnight
+    - ok Bye
+    - take care
+    - talk to you later
+    - Exit
+    - Close this talk
+
+- intent: affirm
+  examples: |
+    - yes
+    - of course
+    - that sounds good
+    - correct
+    - yes, please
+    - Accept
+    - I accept
+    - I agree
+    - I get it
+    - I guess so
+    - Nice
+    - OK
+    - Ofcourse
+    - Ok let's start
+    - Okay
+    - SURE
+    - YES
+    - Yeah
+    - Yeah sure
+    - Yep
+    - Yes please
+    - Yes, I accept
+    - accept
+    - agreed
+    - alright
+    - confirm
+    - done
+    - fine
+    - go ahead
+    - go for it
+    - great
+    - its okay
+    - ok cool
+    - ok fine
+    - ok great
+    - okay sure
+    - okay
+    - perfect
+    - sure
+    - that is cool
+    - that's great
+    - yeah
+    - yep
+    - yes go ahead
+    - yes go for it
+    - yes great
+    - yes i accept
+    - yes i agree
+    - yes it was okay
+    - yes of course
+    - yes please
+    - yes you can
+    - sounds good!
+
+- intent: deny
+  examples: |
+    - no
+    - never
+    - I don't think so
+    - no way
+    - not really
+    - no I don't want that
+    - I don't want to
+    - I don't want to give it to you
+    - I don't want to say
+    - I dont want to tell
+    - I'm not going to give it to you
+    - Nah
+    - Not really
+    - absolutely not
+    - decline
+    - deny
+    - i decline
+    - i'm afraid not
+    - i'm not sure
+    - nah
+    - neither
+    - never
+    - no i can't
+    - no i won't
+    - no sorry
+    - no thank you
+    - no thanks
+    - no way
+    - non
+    - nope
+    - not really
+    - I don't agree
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremely sad
+    - so saad
+    - so sad
+
+- intent: asking_weather
+  examples: |
+    - whats the weather today?
+    - Can you tell me the weather today?
+    - what's the weather like?
+    - weather today
+    - weather
+    - weather condition
+    - weather condition today
+    - find me the weather
+    - give the weather for today
+    - search for the weather today
+    - search weather conditions
+    - find current weather condition
+    - search for current weather condition
+    - weather for today
+    - whats the weather condition today?
+    - whats the condition of the weather?
+    - whats the today's weather condition?
+    - give the weather condition of today
+    - give the weather today
+    - find the weather
+    - find today's weather
+    - tell the weather condition today
+    - tell me the weather for today
+    - tell whats the weather today
+    - tell condition of weather
+    - tell the condition of current weather
+    - tell the condition for todays weather
+    - Tell me the weather condition of today.
+    - Whats the weather Conditions?
+    - I want to know the weather
+    - current weather condition
+    - search weather for
+    - find weather
+    - whats the temperature
+    - whats the climate
+    - climate today
+    - whats the climate condition today?
+    - how's the climate today?
+    - tell me about the climate today?
+    - tell the climate?
+    - tell me temperature outside
+    - find current weather
+    - give the weather condition
+    - tell whats the weather today
+    - search for current weather
+    - tell condition of weather
+    - give the weather for today
+    - okay, Can you tell me the weather
+    - Give me the weather conditions
+    - search for weather
+    - what's the weather like?
+    - I want to know the weather
+    - tell me the weather
+
+- intent: giving_location
+  examples: |
+    - I want to know the weather at [Gandhinagar](location)?
+    - weather for [Ahmedabad](location)
+    - [Pune](location) weather
+    - [pune](location)
+    - for the location at [washington DC](location)
+    - for the location near [Jalandhar](location)
+    - whats the weather at [Mumbai](location)?
+    - current condition at [delhi](location)
+    - for the location [rajkot](location)
+    - find weather for [Porbandar](location)
+    - search weather for [Lonavala](location)
+    - give me the weather for [Ladak](location)
+    - give the weather for the location [Mumbai](location)
+    - search for [Leh](location) weather
+    - current condition at [delhi](location), please
+    - for the location [rajkot](location), please
+    - find weather for [Porbandar](location), please
+    - search weather for [Lonavala](location), please
+    - give me the weather for [Ladak](location), please
+    - [surat](location)
+    - [Delhi](location)
+    - give the weather for the location [Mumbai](location), please
+    - search for [Leh](location) weather, please
+    - find for [Shimla](location) weather, please
+    - whats the weather at [New York](location)
+    - condition at [Nagur](location)
+    - weather condition of [Amsterdam](location)
+    - weather condition at [Barcelona](location)
+    - weather of [Beijing China](location)
+    - weather at [Beirut](location)
+    - want to know the weather of [Cape Town](location)
+    - what's the weather of [Cartagena](location)?
+    - [Copenhagen](location) weather condition
+    - [Cusco](location) condition
+    - [Antalya, Turkey](location)
+    - [Madrid, Spain](location)
+    - [Hong Kong](location) weather search
+    - whats the weather today at [Paris](location)?
+    - Can you tell me the weather at [New York City](location) today?
+    - what's the weather like at [London](location)?
+    - weather today at [Bangkok](location)
+    - weather for [Hong Kong](location)
+    - weather at [Dubai](location)
+    - weather condition for [Singapore](location)
+    - weather condition today ay [Rome](location)
+    - find me the weather for [Macau](location)
+    - give the weather for today at [Istanbul](location)
+    - search for the weather today at [Kuala Lumpur](location)
+    - search weather conditions of [Delhi](location)
+    - find current weather condition at [Tokyo](location)
+    - search for current weather condition of [Antalya](location)
+    - weather for today at [Mexico City](location)
+    - whats the weather condition at [Moscow](location) today?
+    - whats the condition of the weather at [Porto](location)?
+    - whats the today's weather condition of [San Francisco](location)?
+    - whats the weather today at [Beijing](location)?
+    - give the weather condition of today at [Los Angeles](location)
+    - give the weather today for [Chicago](location)
+    - find the weather of [Barcelona](location)
+    - find today's weather at [Abu Dhabi](location)
+    - tell the weather condition today at [Amsterdam](location)
+    - tell me the weather for [Madrid](location) today
+    - tell whats the weather today at [Sydney](location)
+    - [Mumbai, India](location)
+    - tell condition of weather at [San Miguel de Allende](location)
+    - tell the condition of current weather at [Lisbon](location)
+    - tell the condition for todays weather for [Vienna](location)
+    - I want to know the weather at [Gandhinagar, gujarat](location)?
+    - weather for [Ahmedabad, gujarat](location)
+    - [Pune, Maharashtra](location) weather
+    - [Ahmedabad, India](location)
+    - [washington DC](location)
+    - whats the weather at [Mumbai, Maharashtra](location)?
+    - current condition at [Delhi, India](location), please
+    - for the location [rajkot, Gujarat](location)
+    - find weather for [Porbandar-Gujarat](location)
+    - search weather for [Lonavala, Maharashtra](location)
+    - give me the weather for [Ladakh, India](location)
+    - give the weather for the location [Mumbai, Maharashtra](location)
+    - search for [Leh, India](location) weather
+    - find for [Shimla, Himachal Pradesh](location) weather
+    - whats the weather at [New York, United States](location)
+    - condition at [Nagur, Maharashtra](location)
+    - weather condition of [Amsterdam, Netherlands](location)
+    - weather condition at [Barcelona, Spain](location)
+    - [Lisbon](location)
+    - weather of [Beijing, China](location)
+    - weather at [Beirut, Lebanon](location)
+    - want to know the weather of [Mumbai](location), please
+    - what's the weather of [Cartagena, Colombia](location)?
+    - [Copenhagen, Denmark](location) weather condition
+    - [Cusco, Peru](location) condition
+    - [Hong Kong, China](location) weather search
+    - whats the weather today at [Paris, France](location)?
+    - Can you tell me the weather at [New York City, USA](location) today?
+    - what's the weather like at [London, England](location)?
+    - weather today at [Bangkok, Thailand](location)
+    - weather for [Hong Kong, China](location)
+    - [Jaipur](location)
+    - weather at [Dubai, UAE](location), please
+    - weather condition today ay [Rome, Italy](location)
+    - find me the weather for [Macau, China](location)
+    - give the weather for today at [Istanbul, Turkey](location), please
+    - search for the weather today at [Kuala Lumpur, Malaysia](location)
+    - search weather conditions of [Delhi, India](location)
+    - find current weather condition at [Tokyo, Japan](location)
+    - search for current weather condition of [Antalya, Turkey](location)
+    - weather for today at [Mexico City, Mexico](location)
+    - whats the weather condition at [Moscow, Russia](location) today?
+    - whats the condition of the weather at [Porto, Portugal](location)?
+    - whats the today's weather condition of [San Francisco, USA](location)?
+    - whats the weather today at [Beijing, China](location)?
+    - give the weather condition of today at [Los Angeles, USA](location), please
+    - give the weather today for [Chicago, USA](location)
+    - [Beijing](location)
+    - find the weather of [Barcelona, Spain](location), please
+    - find today's weather at [Abu Dhabi, UAE](location)
+    - [Chicago, USA](location)
+    - tell the weather condition today at [Amsterdam, Netherlands](location), please
+    - tell me the weather for [Madrid, Spain](location) today
+    - tell whats the weather today at [Sydney, Australia](location)
+    - tell condition of weather at [San Miguel de Allende, Mexico](location)
+    - tell the condition of current weather at [Lisbon, Portugal](location)
+    - tell the condition for today's weather for [Vienna, Austria](location)
+    - yeah, the today's weather condition of [San Francisco, USA](location)?
+    - okay, Can you tell me the weather at [New York City, USA](location) today?
+    - yes, weather condition for [Singapore](location)
+    - Okay then find the weather for [Jaipur](location).
+    - give me the weather for today at [Mumbai](location).
+    - Okay then find the weather conditions of [dubai](location).
+    - Give me the weather conditions of [Banglore](location).
+    - Okay, give me the weather condition of [Delhi](location).
+    - Give me the weather condition of [Jarkhand](location).
+    - whats the weather at [pornandar](location)?
+- intent: deny_giving_location
+  examples: |
+    - cannot give you location
+    - not giving you my current location
+    - cannot give you the current location
+    - I am not giving you the location
+    - i will not give you that
+    - not giving you that
+    - will not provide you that
+    - i am denying to give you location
+    - not giving location
+    - i will not give you my location
+    - i will not give you the location
+    - location will not be given
+    - find it without the location
+    - find weather with out location
+    - find with out location
+    - search without location
+    - search without it
+    - not giving that
+    - ignore the location
+    - not giving you the location
+
+- intent: telling_current_location
+  examples: |
+    - give the weather condition for my current location
+    - my current location weather condition
+    - weather condition of my current location
+    - weather for my current location
+    - find weather condition for my current location
+    - current location weather
+    - search for my current location weather condition
+    - weather at my current location
+    - current location
+    - location of mine
+    - my location
+    - my location weather
+    - whats the weather of my current location?
+    - whats the weather of current location?
+    - whats the weather outside my house?
+    - weather outside my office
+    - weather near my location
+    - what the weather near my office
+    - whats the weather near my residence
+    - weather outside my home
+    - condition near my office
+    - weather of the area near me
+    - find weather for my current location.
+
+- intent: asking_explanation
+  examples: |
+    - why are you asking me that?
+    - what's the need of that?
+    - is that required?
+    - required?
+    - why this?
+    - you really need that?
+    - why asking this?
+    - why do need my current location?
+    - why are you asking that?
+    - why are you asking for location?
+    - is location required?
+    - is current location needed?
+    - is current location required for search?
+    - is location needed?
+    - Why are you asking that?
+    - can you elaborate
+    - could you explain why you need that
+    - could you tell me more
+    - explain it to me
+    - explain that
+    - i want more information
+    - i would like to know why you need that
+    - please elaborate
+    - please explain
+    - why do you need to know that
+    - why is that necessary
+    - give me more details
+    - why
+    - what do you mean
+    - what does that mean
+    - how come?
+
+- intent: out_of_scope_default
+  examples: |
+    - I am asking you an out of scope question
+    - After registration I see that I have an available balance of 0.00000000. What does this balance represent?
+    - Are you ready?
+    - Can YouTube talk?
+    - Can you call me back ?
+    - Can you give me your datacenter's password
+    - Can you give me your datacenter's password?
+    - Can you make sandwiches?
+    - where is my bottle
+    - Mail me the guide
+    - you have to
+    - kiss me
+    - Who's the US President?
+    - will u kill me
+    - have you heard of corona?
+    - where do i type in command
+    - where to type in commands
+    - who was hitler
+    - who will answer my email?
+    - who's Bill Gates?
+    - what you think about gdpr?
+    - i want play ball
+    - can you cook dinner
+    - no, i need cash, money! Do you have it ?
+    - would you like some water
+    - who is the MD of samsung bangalore ?
+    - who is the president of india ?
+    - where is Oslo?
+    - where is mexico?
+    - what's a newsletter?
+    - what's ginger
+    - what's your wife doing this weekend
+    - whats the sign
+    - when is the next train is coming?
+    - where do i get install files for mac?
+    - i want to fly
+    - which email should i send to ?
+    - what the latest news ?
+    - which file is created first while developing chat bot
+    - which is the LNU asynchronous ?
+    - show me a picture of a chicken
+    - Can you get analytics on who I'm chatting with when I use Rasa
+    - what i do after cd starter-pack-rasa-stack?
+    - what is a discourse?
+    - what is a mascot
+    - what is differance between bot and mascot?
+    - what is evolution ?
+    - what is google rcs
+    - what is machine learning
+    - what is nice?
+    - what is the capital of delhi
+    - what is the capital of india
+    - what is the current petrol price
+    - tell me more about next best action
+    - that doesn't sound like a joke
+    - that link doesn't work!
+    - the one that is better than you
+    - turn off my stove
+    - search wikipedia
+    - it's a pity
+    - mail me the steps
+    - mascot means?
+    - please play music
+    - isn't the newsletter just spam?
+    - connect to alexa
+    - alexa, order 5 tons of atrium chloride
+    - What makes you better than a human?
+    - SEL ME SOMETHING
+    - What's your backend system?
+    - Where am I right now?
+    - Where am I?
+    - i want good fly cam
+    - i want more of you in my life!
+    - i want to book a hotel
+    - i want to buy a roomba for my grandson
+    - i want to find new friends
+    - i immediately need help with implementing the coolest bot you can imagine
+    - i m looking for job
+    - i can't deal with _your_ request
+    - get me a club mate
+    - give me a girl friend
+    - did i break you
+    - do you believe in god?
+    - do you have a phone number?
+    - do you have your photo?
+    - do you know me
+    - do you like cheese?
+    - do you like football
+    - do you like movies
+    - do you sell vacuum robots?
+    - example of a chatbot
+    - do you want to marry me?
+    - book a ticket
+    - I ned a GP in 94301
+    - I need a GP in 94301
+    - I need a girl friend!
+    - I wan to buy a plane
+    - I wanna marry you
+    - I want a new laptop
+    - I want book a hotel
+    - I want to die
+    - I want to use pipe
+    - CALL THE POLICE
+    - ı am learning python
+    - why sky is blue?
+    - what kind of bird are you?
+    - talk to me about roulette
+    - Do you have a demo?
+    - i need money
+    - your country name
+    - wheres the party?
+    - who are the engineers at rasa?
+    - why its called rasa ?
+    - winter is already leaving
+    - with you recommend me?
+    - yeah, my dog was drinking a couple of litres of water per day and tried drinking the swimming pool
+    - you already have that
+    - you have children?
+    - you have job opening
+    - you should learn to count
+    - you will know it from the single red rose it carries between its teeth
+    - you're a woman
+    - sing me a song
+    - so, I'm helping right now to training you?
+    - some thing else
+    - someone call the police i think the bot died
+    - sorry, i cannot rephrase
+    - tell me about yourself
+    - wait a bit i am still reading
+    - what are contextual AI assistants and how different are they from chatbots?
+    - what are you doing now?
+    - what are your uses for universities
+    - HomeBase is advertised as a community. Is there a way to interact with other members of the community?
+    - How long does it take to set up a Rasa bot?
+    - I already told you! I'm a muncher
+    - what did you eat for lunch?
+    - what do oyu think about siri?
+    - what do you think of alexa
+    - what does your soul feel my friend
+    - what films do you like
+    - what is the day ?
+    - what is the real use case where we can use this one
+    - what is your address?
+    - what is your purpose
+    - what you ate today?
+    - oh wait i gave you my work email address can i change it?
+    - on which nlp based system are you build?
+    - please help with my ice cream it's dripping
+    - please have lunch
+    - please hurry, i have deadline in two weeks to deliver the bot it is for very big company
+    - I am trying to build one, and did some research before, but I have not do hand-on work yet
+    - I can barely see this white text on light gray background ...
+    - Is today saturday?
+    - What day is it today?
+    - What did you eat yesterday?
+    - What do you prefer?
+    - What is today's date
+    - What is your hobbies?
+    - Who are your customers
+    - Why don’t you answer?
+    - Why is my TRUST score set to 50 after I completed the registration process?
+    - Won't you ask me how I am?
+    - [Kristin](name), I want to marry you
+    - a tamed mouse will arrive at your doorstep in the next couple of days
+    - and make chicken noises into the phone
+    - are the newsletter worth the subscription?
+    - but if rasa is open source why do you have a sales team
+    - can we keep chatting?
+    - can you learn from our conversation?
+    - can you speak about politic ?
+    - great, I'd like to buy a house
+    - have you ever seen [Keith Reilly](name)?
+    - help with [Alma Abrams](name)
+    - help with my life
+    - hey little mama let em whisper in your ear
+    - hey, I contacted you a couple of days ago but didn't get any response, any news?
+    - how come you say ok ?
+    - how do you learn
+    - how it compares to alexa
+    - how long have you been online?
+    - how long will the next version will launch?
+    - how many lines of codes
+    - how to get rasa studio
+    - how to go to newyork ?
+    - i am not a developer but need this for business
+    - i want to find out what you can build with rasa
+    - is rasa a studio?
+    - is rasa any good
+
+- intent: out_of_scope_rephrase
+  examples: |
+    - NLW
+    - Now?
+    - Who ?
+    - You are blue.
+    - again?
+    - cannot see
+    - genocide
+    - chgfhgh
+    - Recharge
+    - flight catch up
+    - silly bot
+    - ok one then
+    - what lnu mean?
+    - aRE YOU SINGLE
+    - which email
+    - oh my god, not again!
+    - can you understand ?
+    - chinese ok?
+    - call me father
+    - better than you
+    - but I just told you that
+    - is that any of your business
+    - only that?
+    - order good
+    - personal or work?
+    - common, just try
+    - buy one please
+    - coronavirus
+    - contextual
+    - the beatles
+    - I have installed it
+    - I will check
+    - Try it out broken
+    - I changed my mind
+    - Is Rasa really smart?
+    - i want to see your happy customers
+    - i will tame a mouse for you
+    - is John Lewis still married to you
+    - is it a wasteland full of broken robot parts?
+    - is it allow to
+    - The Try it out is not working
+    - Is this Goal-Oriented Chatbot?
+    - are you dev?
+    - are you russian?
+    - are you sick
+    - are you vegan
+    - who is your favourite robot?
+    - Whats do YouTube do
+    - really? you're so touchy?
+    - i told you already
+    - Have we met before?
+    - refresh
+    - region with no. of records
+    - mountain
+    - i do not care how are you
+    - my name k
+    - license
+    - machine learning
+    - I am User
+    - I am an opioid addict
+    - who let the dog out
+    - vcsdlvbb sddhlhc sdcsd;hv
+    - how about NYC
+    - how are Alicia Jackson's cats doing?
+    - how are the kids
+    - how can i get them?
+    - how can i test this
+    - sdasdsafsdffec  dsfsdfsdvcfv dsfsdfsd
+    - which city are you talking about?
+    - []p-[;'/][/
+    - {}[]09()-=-= [8554864](alpha_numbers)
+    - [251684213165848615](alpha_numbers)
+    - [sndbflsdhc6545151](alpha_numbers) sdfhsd [5656151](alpha_numbers) [5415645](alpha_numbers)
+    - [1564486468](alpha_numbers) [asdasdsa465484](alpha_numbers) sadwedeads
+    - sfasd
+    - asdkjasdhjkasd
+    - j  bhbhj
+    - eshdtjfjfyk
+    - drhdtjfjfyj
+    - sudo reboot
+    - asdfgasd
+    - asdfgasdas
+    - gsaf
+    - tertyryutyi
+    - go back
+    - google?
+    - doctor
+    - everything
+    - colder
+    - custom service
+    - wsdrcftvgybhnj
+    - Out of scope question.
+    - which kind
+    - what?
+    - whats that
+    - who are they?
+    - what doing
+    - what else?
+    - umm
+    - tricked  ya
+    - more
+    - ljljl
+    - i am qq
+    - how
+    - you girl
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - how good is Rasa
+    - what type of bot?
+
+- intent: out_of_scope_food
+  examples: |
+    - I want to order food
+    - Can I get a hamburger?
+    - i want to eat
+    - i´m hungry
+    - I want pizza
+    - I want french cuisine
+    - give me food
+    - I need to eat cake
+    - offer me lunch
+    - I want to order pizza
+    - Pizza bot
+    - can you give me a cup of coffee
+    - can you book dinner
+    - dinner
+    - buy groceries
+    - Make me a sandwich
+    - how do you like your coffee
+    - i am hungry
+    - i am hungry, what should i do?
+    - i wanna party
+    - i want a non dripping ice cream
+    - i want caffe
+    - i want food
+    - I am hungry
+    - i want pizza
+    - i want pizza!!
+    - i want to order a pizza
+    - pizza
+    - i want to grab lunch
+    - lunch
+    - lunch??
+    - order pizza
+    - sudo make me a sandwich
+    - you can learn how to make a coffee
+    - no wait go back i want a dripping ice cream but a cone that catches it so you can drink the ice cream later
+    
+
+- intent: out_of_scope_math
+  examples: |
+    - 4 + 2 = ?
+    - What is 2 + 2?
+    - What's 1 + 1?
+    - how much is 10 + 89 ?
+    - how much is 10 + 89
+    - what's 5 + 5
+
+- intent: out_of_scope_vehicle
+  examples: |
+    - Can you please send me an uber
+    - book a Cars
+    - book me a cab
+    - I want to by a car
+    - book a taxi for me
+    - book a train for me
+    - book a flight for me
+    - I want to book a bus
+    - book a bus ticket for me
+
+- intent: out_of_scope_personal
+  examples: |
+    - do you know my name?
+    - do you know my last name?
+    - do you know my home address?
+    - tell me my phone number
+    - do you have my contact details?
+    - where is my bike?
+    - are you having my personal details?
+    - where is my home?
+    - where is my car?
+    - do you know where are my books?
+    - can you help me find my cards
+    - can you find my wallet?
+    - party of mine
+    - my birthday
+    - my location party
+
+- intent: about_rasa
+  examples: |
+    - What is rasa?
+    - tell me about rasa.
+    - Do you know what is rasa?
+    - what rasa is?
+    - tell me something about rasa.
+- intent: out_of_scope_error_sentence
+  examples: |
+    - search food conditions of [Delhi](location)
+    - find current time at [Tokyo](location)
+    - search for restaurant at [Antalya](location)
+    - soup for today at [Mexico City](location)
+    - whats the blabla condition at [Moscow](location) today?
+    - whats the condition of the cricket at [Porto](location)?
+    - whats the today's football condition of [San Francisco](location)?
+    - whats the match today at [Beijing](location)?
+    - give the war condition of today at [Los Angeles](location)
+    - give the food today for [Chicago](location)
+    - find the hotel of [Barcelona](location)
+    - find todays news at [Abu Dhabi](location)
+    - tell the match condition today at [Amsterdam](location)
+    - tell me the chitchat for [Madrid](location) today
+    - tell whats the crime today at [Sydney](location)
+    - tell condition of airport at [San Miguel de Allende](location)
+    - tell the condition of current flights at [Lisbon](location)
+    - tell the condition for todays match for [Vienna](location)
+    - I want to know the car parking at Gandhinagar, gujarat?
+    - pray for [Ahmedabad, gujarat](location)
+    - [Pune, Maharashtra](location) match
+    - whats the national bird of [Mumbai, Maharashtra](location)?
+    - current match at [Delhi, India](location)
+    - find water at [Porbandar, Gujarat](location)
+    - search plates for [Lonavala, Maharashtra](location)
+    - give me the cup for [Ladakh, India](location)
+    - give the hotels for the location [Mumbai, Maharashtra](location)
+    - search for [Leh, India](location) hotels
+    - find for [Shimla, Himachal Pradesh](location) restaurant
+    - whats the national food of [New York, United States](location)
+    - match at [Nagur, Maharashtra](location)
+    - living condition of [Amsterdam, Netherlands](location)
+    - people condition at [Barcelona, Spain](location)
+    - pizza of [Beijing, China](location)
+    - hotel at [Beirut, Lebanon](location)
+    - want to know the living of [jaipur, India](location)
+    - what's the people of [Cartagena, Colombia](location)?
+    - [Copenhagen, Denmark](location) people condition
+    - [Cusco, Peru](location) match
+    - [Hong Kong, China](location) hotel search
+    - whats the war today at [Paris, France](location)?
+    - Can you tell me the restaurant at [New York City, USA](location) today?
+    - what's the living like at [London, England](location)?
+    - match today at [Bangkok, Thailand](location)
+    - vote for [Hong Kong, China](location)
+    - match at [Dubai, UAE](location)
+    - ground condition today at [Rome, Italy](location)
+    - find me the hotel for [Macau, China](location)
+    - give the soup for today at [Istanbul, Turkey](location)
+    - search for the match today at [Kuala Lumpur, Malaysia](location)
+    - search capital of [Delhi, India](location)
+    - give the pizza condition for my current location
+    - my current noodles condition
+    - match condition of my current location
+    - hotel for my current location
+    - find restaurant condition for my current location
+    - current location football match
+    - search for my current location
+    - car parking at my current location
+    - historical location
+    - whats the  of my current location?
+    - whats the burger of current location?
+    - whats the fight outside my house?
+    - war outside my office
+    - match near my location
+
+- synonym: weather
+  examples: |
+    - climate
+    - temperature
+
+- regex: alpha_numbers
+  examples: |
+    - [0-9]{1,}
+    - [A-Za-z0-9]{1,}

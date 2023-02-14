@@ -1,0 +1,161 @@
+version: "3.1"
+
+rules:
+
+- rule: normal start for greeting
+  conversation_start: true
+  steps:
+    - intent: greet
+    - action: action_greet_welcome
+    - action: action_get_the_location
+
+- rule: normal start for greeting
+  conversation_start: false
+  steps:
+    - intent: greet
+    - action: action_greet_welcome
+
+- rule: user starts with giving location
+  conversation_start: true
+  steps:
+    - intent: giving_location
+    - slot_was_set:
+        - location_slot: gandhinagar, gujarat
+    - action: action_greet_welcome
+    - action: action_location_validation_and_conformation
+
+- rule: user starts with giving location
+  conversation_start: false
+  steps:
+    - intent: giving_location
+    - slot_was_set:
+        - location_slot: gandhinagar, gujarat
+    - action: action_location_validation_and_conformation
+
+- rule: user starts directly with weather
+  conversation_start: true
+  steps:
+    - intent: asking_weather
+    - action: action_greet_get_the_location
+
+- rule: user starts directly with weather
+  conversation_start: false
+  steps:
+    - intent: asking_weather
+    - action: action_get_the_location
+
+- rule: deny to give location
+  steps:
+    - intent: deny_giving_location
+    - action: action_explain_to_deny
+    - action: action_get_the_location
+
+- rule: telling 'my current location'
+  steps:
+    - intent: telling_current_location
+    - action: action_explain_to_current_location
+    - action: action_get_the_location
+
+- rule: asking for explanation
+  steps:
+    - intent: asking_explanation
+    - action: action_explain_to_why
+    - action: action_get_the_location
+
+- rule: conformation of location with deny
+  steps:
+    - action: action_location_validation_and_conformation
+    - intent: deny
+    - action: action_again_ask_for_location
+
+- rule: conformation of location with affirm
+  steps:
+    - action: action_location_validation_and_conformation
+    - intent: affirm
+    - action: action_master_weather_fetch
+    - action: action_master_weather_print
+    - action: action_ask_for_more_details
+
+- rule: more details with deny
+  steps:
+    - action: action_ask_for_more_details
+    - intent: deny
+    - action: action_proceed_further
+
+- rule: more details with display all
+  steps:
+    - action: action_ask_for_more_details
+    - intent: display_all_details
+    - action: action_display_all_details
+
+- rule: more details with display selected data
+  steps:
+    - action: action_ask_for_more_details
+    - intent: display_list
+    - action: action_display_list
+
+- rule: Sudden check online reply
+  steps:
+  - intent: intsa_facebook_types_reply
+  - action: action_reply_for_availability
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: action_goodbye
+  - action: action_see_you_again
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: action_iamabot
+
+- rule: out-of-scope-default
+  steps:
+  - intent: out_of_scope_default
+  - action: action_handling_out_of_scope_default
+
+- rule: out-of-scope-rephrase
+  steps:
+  - intent: out_of_scope_rephrase
+  - action: action_handling_out_of_scope_rephrase
+
+- rule: out-of-scope-food
+  steps:
+  - intent: out_of_scope_food
+  - action: action_handling_out_of_scope_food
+
+- rule: out-of-scope-math
+  steps:
+  - intent: out_of_scope_math
+  - action: action_handling_out_of_scope_math
+
+- rule: out-of-scope-vehicle
+  steps:
+  - intent: out_of_scope_vehicle
+  - action: action_handling_out_of_scope_vehicle
+
+- rule: out-of-scope-personal
+  steps:
+  - intent: out_of_scope_personal
+  - action: action_handling_out_of_scope_personal
+
+- rule: out-of-scope-error-sentence
+  steps:
+  - intent: out_of_scope_error_sentence
+  - action: action_handling_out_of_scope_error_sentence
+
+- rule: out-of-scope-error-location
+  steps:
+  - action: action_handling_out_of_scope_error_location
+  - action: action_get_the_location
+
+- rule: asking-about-rasa
+  steps:
+  - intent: about_rasa
+  - action: action_about_rasa
+
+- rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+  steps:
+  - intent: nlu_fallback
+  - action: utter_default
