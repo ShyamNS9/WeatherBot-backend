@@ -17,7 +17,7 @@
         "Please enter a path where the project will be created [default: current directory]" > click Enter to Continue
     > Continue with training & trying the initial model with the process flow during the rasa init command.
     > Exit the chat shell initial model with '/stop' command
-> Now copy the content of this project files with yours in the directory you have created during rasa init command.
+> Now copy the content of this project files with yours in the directory you have created for the project.
     for example: copy the content of nlu.yml file of this project to yours nlu.yml likewise do the same for all the file in this project.
 > Now you can train the model for this project:
     > Run command: rasa train
